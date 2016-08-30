@@ -1,0 +1,16 @@
+<h1>Activity List</h1>
+
+<hr>
+
+<div>
+  <% @activities.each do |a| %>
+    <div>
+      <li>Name: <%= a.name %></li>
+      <li>Description: <%= a.description %></li>
+      <li>Group Size: <%= a.group_size %></li>
+      <li>Budget: <%= a.budget %></li>
+      <li>Theme: <%= a.theme %></li>
+      <li>TimeOfDay: <%= a.timeframe %></li>
+    </div>
+  <% end %>
+</div>

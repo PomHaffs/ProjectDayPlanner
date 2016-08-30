@@ -1,0 +1,27 @@
+// Place all the styles related to the Activities controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  font-family: sans-serif;
+  color: black;
+  text-align: center;
+}
+
+.option1, .option2, .option3 {
+  background: lightslategrey;
+  height: 600px;
+  line-height: 600px;
+}
+.pick {
+  border: 1px solid black;
+}
+
+.selection1, .selection2, .selection3 {
+  width: 200px;
+  height:200px;
+  background: grey;
+  border-radius: 100px;
+  line-height: 200px;
+  display: inline-block;
+  margin: 30px;
+}
