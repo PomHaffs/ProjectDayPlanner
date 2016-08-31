@@ -1,11 +1,38 @@
 <html>
 <head>
   <title>DayPlanner</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+  <% if session[:success] %>
+      <h1><%= session[:success] %></h1>
+      <% end %>
+
+    <% if flash[:success] %>
+      <h1><%= flash[:success] %></h1>
+    <% end %>
+
+    <% if flash[:error] %>
+      <h1><%= flash[:error] %></h1>
+    <% end %>
+
+  <nav>
+    Link to all users page
+    <%= link_to( "All Users", users_path() ) %>
+
+    <% unless @current_user.present? %>
+      <%= link_to( "Login", login_path() ) %>
+      <%= link_to( "Sign up", new_user_path() ) %>
+    <% else %>
+    <%= link_to( "Edit your profile", edit_user_path(@current_user.id) ) %>
+    <%= link_to( "Log Out #{@current_user.email}", logout_path(), :method => :delete ) %>
+    You are logged in as <%= @current_user.name %>
+    <% end %>
+  </nav>
+
 
   <nav>
     <%= link_to "Activities", "/activities" %>

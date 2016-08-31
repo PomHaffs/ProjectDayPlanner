@@ -12,8 +12,20 @@ class ActivitiesController < ApplicationController
     @opt2 = params[:opt2]
     @opt3 = params[:opt3]
 
-    
-    # @activities = [your query based on the params goes here]
+    @filter = Activity.where(:group_size => Activity.group_sizes[@opt1], :budget => Activity.budgets[@opt2], :theme => Activity.themes[@opt3])
+
+    @AMact = @filter.AM.sample
+    @MDact = @filter.midday.sample
+    @PMact = @filter.PM.sample
+
+
+
+    # @AMact = Activity.where(:group_size => @opt1).shuffle.first
+    # @MDact = Activity.where(:budget => @opt2).shuffle.first
+    # @PMact = Activity.where(:theme => @opt3).shuffle.first
+    # # @activities = [your query based on the params goes here]
+
+
   end
 
   def show

@@ -1,0 +1,64 @@
+* {
+  font-family: sans-serif;
+}
+
+.landing {
+  width: 1200px;
+  height: 800px;
+  background: rgb(98, 101, 103);
+  position: absolute;
+}
+
+.gaps {
+  height: 20px;
+}
+
+.logo {
+  width: 1000px;
+  height: 200px;
+  font-size: 3em;
+  line-height: 200px;
+  border-radius: 20px;
+  margin: auto;
+  background: rgb(144, 148, 151);
+}
+
+.bio {
+  width: 1000px;
+  height: 200px;
+  border-radius: 20px;
+  margin: auto;
+  font-size: 18px;
+  padding-top: 10px;
+  text-align: justify;
+  padding: 5px;
+  background: rgb(144, 148, 151);
+}
+ .form {
+    width: 400px;
+    height: 200px;
+    border-radius: 20px;
+    margin: auto;
+    font-size: 18px;
+    padding-top: 10px;
+    text-align: center;
+    padding: 5px;
+    background: rgb(144, 148, 151);
+ }
+
+.space {
+  display: inline-block;
+  width: 200px;
+}
+
+.button, .button2 {
+  width: 400px;
+  height: 200px;
+  line-height: 200px;
+  font-size: 50px;
+  border-radius: 20px;
+  color:inherit;
+  text-decoration: none;
+  display: inline-block;
+  background: rgb(144, 148, 151);
+}

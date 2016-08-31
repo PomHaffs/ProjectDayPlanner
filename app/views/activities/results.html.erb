@@ -1,5 +1,39 @@
-<h1>This will be the results page</h1>
+<h1>This will be the RESULTS page</h1>
 
-<%=@opt1 %>
-<%=@opt2 %>
-<%=@opt3 %>
+<hr>
+  <div class="time">
+    AM
+  </div>
+
+  <div class="info">
+    <p>Name: <%= link_to(@AMact.name, @AMact.link) %></p>
+    <p>Description: <%= @AMact.description %></p>
+  </div>
+
+<hr>
+  <div class="time">
+    MD
+  </div>
+
+  <div class="info">
+    <p>Name: <%= link_to(@MDact.name, @MDact.link) %></p>
+    <p>Description: <%= @MDact.description %></p>
+  </div>
+
+<hr>
+  <div class="time">
+    PM
+  </div>
+
+  <div class="info">
+    <p>Name: <%= link_to(@PMact.name, @PMact.link) %></p>
+    <p>Description: <%= @PMact.description %></p>
+  </div>
+
+<hr>
+
+<div class="MoreOptions">
+
+  <%= link_to("Back to questions", activities_search_path, :class => "refresh") %>
+
+</div>
