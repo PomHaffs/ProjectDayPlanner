@@ -2,11 +2,9 @@
 
 <h1>Activity List</h1>
 
-<hr>
-
 <div>
   <% @activities.each do |a| %>
-    <div>
+    <div class="FullList">
       <li>Name: <%= a.name %></li>
       <li>Description: <%= a.description %></li>
       <li>Group Size: <%= a.group_size %></li>

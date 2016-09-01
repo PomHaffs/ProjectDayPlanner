@@ -1,44 +1,47 @@
-<h1>This will be the RESULTS page</h1>
 
-<div class="container">
+  <h1>This will be the RESULTS page</h1>
 
-  <div class="time">
-    AM
+  <div class="container">
+
+    <div class="first">
+      <div class="time">
+        AM
+      </div>
+
+      <div class="info">
+        <p>Name: <%= link_to(@AMact.name, @AMact.link) %></p>
+        <p>Description: <%= @AMact.description %></p>
+      </div>
+        
+
+    <div class="time">
+      MD
+    </div>
+
+    <div class="info">
+      <p>Name: <%= link_to(@MDact.name, @MDact.link) %></p>
+      <p>Description: <%= @MDact.description %></p>
+    </div>
+
+    <div class="time">
+      PM
+    </div>
+
+    <div class="info">
+      <p>Name: <%= link_to(@PMact.name, @PMact.link) %></p>
+      <p>Description: <%= @PMact.description %></p>
+    </div>
+
   </div>
 
-  <div class="info">
-    <p>Name: <%= link_to(@AMact.name, @AMact.link) %></p>
-    <p>Description: <%= @AMact.description %></p>
+  <div class="MoreOptions">
+
+    <%= link_to("Back to questions", activities_search_path, :class => "refresh") %>
+
   </div>
+  <div class="MoreOptions">
 
+    <%= link_to("Refresh", activities_resultsRan_path, :class => "refresh") %>
 
-  <div class="time">
-    MD
   </div>
-
-  <div class="info">
-    <p>Name: <%= link_to(@MDact.name, @MDact.link) %></p>
-    <p>Description: <%= @MDact.description %></p>
-  </div>
-
-  <div class="time">
-    PM
-  </div>
-
-  <div class="info">
-    <p>Name: <%= link_to(@PMact.name, @PMact.link) %></p>
-    <p>Description: <%= @PMact.description %></p>
-  </div>
-
-</div>
-
-<div class="MoreOptions">
-
-  <%= link_to("Back to questions", activities_search_path, :class => "refresh") %>
-
-</div>
-<div class="MoreOptions">
-
-  <%= link_to("Refresh", activities_resultsRan_path, :class => "refresh") %>
-
-</div>
+</body>

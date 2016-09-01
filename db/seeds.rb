@@ -6,67 +6,12 @@ u2 = User.create :name => "Other", :email => "Other@ga.co", :password => "chicke
 
 Activity.destroy_all
 
-a1 = Activity.create({
-:name => "Morning-single-test",
-:description => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt",
-:group_size => "single",
-:timeframe => "AM",
-:link => "",
-:latitude => "",
-:longitude => ""
-})
-a2 = Activity.create({
-:name => "Midday-single-test",
-:description => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut",
-:group_size => "single",
-:timeframe => "midday",
-:link => "",
-:latitude => "",
-:longitude => ""
-})
-a3 = Activity.create({
-:name => "PM-single-test",
-:description => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.",
-:group_size => "single",
-:timeframe => "PM",
-:link => "",
-:latitude => "",
-:longitude => ""
-})
-
-a4 = Activity.create({
-:name => "Morning-together-test",
-:description => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt",
-:group_size => "together",
-:timeframe => "AM",
-:link => "",
-:latitude => "",
-:longitude => ""
-})
-a5 = Activity.create({
-:name => "Midday-together-test",
-:description => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut",
-:group_size => "together",
-:timeframe => "midday",
-:link => "",
-:latitude => "",
-:longitude => ""
-})
-a6 = Activity.create({
-:name => "PM-together-test",
-:description => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.",
-:group_size => "together",
-:timeframe => "PM",
-:link => "",
-:latitude => "",
-:longitude => ""
-})
 
 City.destroy_all
 
 c1 = City.create ({:name => "Sydney"})
 
-c1.activities << a1 << a2 << a3
+c1.activities 
 
 b0 = Activity.create({
 :name => "Rusty RabbitAM",

@@ -6,9 +6,18 @@ body {
   font-family: sans-serif;
   color: black;
   text-align: center;
-  background-size: 1600px 800px;
+  background-size: 1400px 800px;
 }
 
+.FullList{
+  border: 2px solid black;
+  text-align: left;
+  margin-left: 50px;
+  margin-bottom: 20px;
+  display: inline-block;
+  width: 270px;
+  height: 18  0px;
+}
 .option1, .option2, .option3 {
   background: lightslategrey;
   height: 120px;
