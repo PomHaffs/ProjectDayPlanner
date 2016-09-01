@@ -9,18 +9,18 @@
       </div>
 
       <div class="info">
-        <p>Name: <%= link_to(@AMact.name, @AMact.link) %></p>
+        <p>Name: <%= link_to(@AMact.name, "/activities/#{@AMact.id}/display") %></p>
         <p>Description: <%= @AMact.description %></p>
       </div>
-        
+
 
     <div class="time">
       MD
     </div>
 
     <div class="info">
-      <p>Name: <%= link_to(@MDact.name, @MDact.link) %></p>
-      <p>Description: <%= @MDact.description %></p>
+        <p>Name: <%= link_to(@MDact.name, "/activities/#{@MDact.id}/display") %></p>
+        <p>Description: <%= @MDact.description %></p>
     </div>
 
     <div class="time">
@@ -28,8 +28,8 @@
     </div>
 
     <div class="info">
-      <p>Name: <%= link_to(@PMact.name, @PMact.link) %></p>
-      <p>Description: <%= @PMact.description %></p>
+        <p>Name: <%= link_to(@PMact.name, "/activities/#{@PMact.id}/display") %></p>
+        <p>Description: <%= @PMact.description %></p>
     </div>
 
   </div>
@@ -41,7 +41,7 @@
   </div>
   <div class="MoreOptions">
 
-    <%= link_to("Refresh", activities_resultsRan_path, :class => "refresh") %>
+    <%= link_to("Refresh", activities_results_path, :class => "refresh") %>
 
   </div>
 </body>

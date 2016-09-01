@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get "/activities/options" => "activities#options"
   get "/activities/results" => "activities#results"
   get "/activities/search" => "activities#search"
-  get "/activities/resultsRan" => "activities#resultsRan"
+  get "/activities/:id/display" => "activities#display"
 
   resources :users, :except => [:edit]
   resources :activities, :cities

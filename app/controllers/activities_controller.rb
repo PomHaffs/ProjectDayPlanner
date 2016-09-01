@@ -4,8 +4,12 @@ class ActivitiesController < ApplicationController
     @activities = Activity.all
   end
 
-  def options
+  def display
+    @activity = Activity.find params[:id]
 
+  end
+
+  def options
   end
 
   def search
@@ -22,13 +26,6 @@ class ActivitiesController < ApplicationController
     @MDact = @filter.midday.sample
     @PMact = @filter.PM.sample
 
-  end
-
-  def resultsRan
-
-    @AMact = @filter.AM.sample
-    @MDact = @filter.midday.sample
-    @PMact = @filter.PM.sample
   end
 
   def show
