@@ -1,6 +1,7 @@
 <h1>This will be the RESULTS page</h1>
 
-<hr>
+<div class="container">
+
   <div class="time">
     AM
   </div>
@@ -10,7 +11,7 @@
     <p>Description: <%= @AMact.description %></p>
   </div>
 
-<hr>
+
   <div class="time">
     MD
   </div>
@@ -20,7 +21,6 @@
     <p>Description: <%= @MDact.description %></p>
   </div>
 
-<hr>
   <div class="time">
     PM
   </div>
@@ -30,10 +30,15 @@
     <p>Description: <%= @PMact.description %></p>
   </div>
 
-<hr>
+</div>
 
 <div class="MoreOptions">
 
   <%= link_to("Back to questions", activities_search_path, :class => "refresh") %>
+
+</div>
+<div class="MoreOptions">
+
+  <%= link_to("Refresh", activities_resultsRan_path, :class => "refresh") %>
 
 </div>

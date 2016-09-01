@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 before_action :authorise, :only => [:index, :edit]
 
+
   def index
     @users = User.all
   end
@@ -17,7 +18,7 @@ before_action :authorise, :only => [:index, :edit]
     @user = User.new user_params
     if @user.save
       flash[:success] = "User was successfully created"
-      redirect_to users_path
+      redirect_to activities_options_path
     else
       flash[:error] = "The lens cap is on"
       render :new

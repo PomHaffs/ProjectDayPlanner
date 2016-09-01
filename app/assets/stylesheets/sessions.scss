@@ -1,34 +1,30 @@
-* {
-  font-family: sans-serif;
-}
-
-.landing {
-  width: 1200px;
-  height: 800px;
-  background: rgb(98, 101, 103);
-  position: absolute;
+body {
+  background-image: url("AM-PM.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 1400px 800px;
 }
 
 .gaps {
-  height: 20px;
+  height: 10px;
 }
 
 .logo {
-  width: 1000px;
-  height: 200px;
+  width: 800px;
+  height: 180px;
   font-size: 3em;
-  line-height: 200px;
+  line-height: 180px;
   border-radius: 20px;
   margin: auto;
   background: rgb(144, 148, 151);
 }
 
 .bio {
-  width: 1000px;
-  height: 200px;
+  width: 700px;
+  height: 120px;
   border-radius: 20px;
   margin: auto;
-  font-size: 18px;
+  font-size: 15px;
   padding-top: 10px;
   text-align: justify;
   padding: 5px;
@@ -48,14 +44,14 @@
 
 .space {
   display: inline-block;
-  width: 200px;
+  width: 100px;
 }
 
 .button, .button2 {
-  width: 400px;
-  height: 200px;
-  line-height: 200px;
-  font-size: 50px;
+  width: 200px;
+  height: 100px;
+  line-height: 100px;
+  font-size: 30px;
   border-radius: 20px;
   color:inherit;
   text-decoration: none;

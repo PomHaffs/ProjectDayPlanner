@@ -4,6 +4,10 @@ class ActivitiesController < ApplicationController
     @activities = Activity.all
   end
 
+  def options
+
+  end
+
   def search
   end
 
@@ -18,14 +22,13 @@ class ActivitiesController < ApplicationController
     @MDact = @filter.midday.sample
     @PMact = @filter.PM.sample
 
+  end
 
+  def resultsRan
 
-    # @AMact = Activity.where(:group_size => @opt1).shuffle.first
-    # @MDact = Activity.where(:budget => @opt2).shuffle.first
-    # @PMact = Activity.where(:theme => @opt3).shuffle.first
-    # # @activities = [your query based on the params goes here]
-
-
+    @AMact = @filter.AM.sample
+    @MDact = @filter.midday.sample
+    @PMact = @filter.PM.sample
   end
 
   def show
@@ -37,6 +40,8 @@ class ActivitiesController < ApplicationController
 
   def create
     activity = Activity.create( activity_params )
+    flash[:success] = "Successfully created"
+    redirect_to activities_options_path
   end
 
   def edit

@@ -1,0 +1,30 @@
+
+<%= form_for @activity do |f| %>
+  <p id="form">
+    <%= f.label :name %>
+    <%= f.text_field :name, :required => true %> <br>
+    <%= f.label :description %>
+    <%= f.text_field :description, :required => true %><br>
+    <%= f.label :link %>
+    <%= f.text_field :link, :required => true %><br>
+  </p>
+  <p id="form">
+    <%= f.label :budget %><br>
+    <%= f.collection_select(:budget, Activity.all, :id, :budget)%>
+    <%= f.label :GroupSize %><br>
+    <%= f.collection_select(:group_size, Activity.all, :id, :group_size)%>
+    <%= f.label :Timeframe %><br>
+    <%= f.collection_select(:timeframe, Activity.all, :id, :timeframe)%>
+  </p>
+  <%= f.submit "Add new" %>
+<% end %>
+<!--
+  t.string   "name"
+  t.string   "description"
+  t.integer  "group_size",  default: 0 //this will need to be a selection
+  t.integer  "budget",      default: 0 //this will need to be a selection
+  t.integer  "theme",       default: 0 //this will need to be a selection
+  t.integer  "timeframe",   default: 0 //this will need to be a selection
+  t.text     "link"
+  t.integer  "city_id"                 //this will need to be a selection
+-->

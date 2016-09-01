@@ -1,29 +1,40 @@
 // Place all the styles related to the Activities controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 body {
   font-family: sans-serif;
   color: black;
   text-align: center;
+  background-size: 1600px 800px;
 }
 
 .option1, .option2, .option3 {
   background: lightslategrey;
-  height: 600px;
-  line-height: 600px;
+  height: 120px;
+  width: 800px;
+  border-radius: 20px;
+  margin: auto;
+  line-height: 120px;
 }
 .pick {
   border: 1px solid black;
 }
 
 .selection1, .selection2, .selection3 {
-  width: 200px;
-  height:200px;
+  width: 100px;
+  height: 100px;
   background: grey;
   border-radius: 100px;
-  line-height: 200px;
+  line-height: 100px;
   display: inline-block;
-  margin: 30px;
+  margin: 10px;
+}
+.container {
+  width: 550px;
+
+  text-align: center;
+  margin: auto;
 }
 
 .time {
@@ -49,5 +60,12 @@ body {
   text-decoration: none;
   display: inline-block;
   background: grey;
+  margin-top: 5px;
   border-radius: 30px;
+}
+#form{
+  box-sizing: border-box;
+  display: inline-block;
+  width: 150px;
+  margin: auto;
 }
